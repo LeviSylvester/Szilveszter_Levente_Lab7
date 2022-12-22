@@ -1,3 +1,5 @@
+using Szilveszter_Levente_Lab7.Models;
+
 namespace Szilveszter_Levente_Lab7;
 
 public partial class ListEntryPage : ContentPage

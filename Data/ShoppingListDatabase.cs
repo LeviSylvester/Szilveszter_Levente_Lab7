@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Szilveszter_Levente_Lab7.Data
 {
-    class ShoppingListDatabase
+    public class ShoppingListDatabase
     {
         readonly SQLiteAsyncConnection _database;
         public ShoppingListDatabase(string dbPath)
