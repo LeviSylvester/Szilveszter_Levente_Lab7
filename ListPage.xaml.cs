@@ -31,6 +31,13 @@ public partial class ListPage : ContentPage
             BindingContext = new Product()
         });
     }
+        
+    async void OnDeleteItemButtonClicked(object sender, EventArgs e)
+    {
+        var plist = (Product)BindingContext;
+        await App.Database.DeleteProductAsync(plist);
+        await Navigation.PopAsync();
+    }
 
     protected override async void OnAppearing()
     {
