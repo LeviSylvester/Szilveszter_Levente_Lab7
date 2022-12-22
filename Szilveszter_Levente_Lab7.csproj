@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\main_image.png" />
 	  <None Remove="Resources\Images\shop_list.png" />
 	</ItemGroup>
 

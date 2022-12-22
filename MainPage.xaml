@@ -10,8 +10,8 @@
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="main_image.png"
+                SemanticProperties.Description="personalized image"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
@@ -22,7 +22,7 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Welcome to .NET Multi-platform App UI"
+                Text="Welcome to my first Android App"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
