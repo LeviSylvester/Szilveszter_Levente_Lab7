@@ -36,7 +36,7 @@ namespace Szilveszter_Levente_Lab7.Data
         public Task<int> DeleteProductAsync(Product product)
         {
             return _database.DeleteAsync(product);
-        }
+        }        
 
         public Task<List<Product>> GetProductsAsync()
         {
@@ -54,6 +54,29 @@ namespace Szilveszter_Levente_Lab7.Data
                 return _database.InsertAsync(listp);
             }
         }
+
+        public Task<int> DeleteShopListAsync(ShopList shopl)
+        {
+            return _database.DeleteAsync(shopl);
+        }
+
+        public Task<int> SaveShopListAsync(ShopList shopl)
+        {
+            if (shopl.ID != 0)
+            {
+                return _database.UpdateAsync(shopl);
+            }
+            else
+            {
+                return _database.InsertAsync(shopl);
+            }
+        }
+
+        public async Task<List<ShopList>> GetShopListsAsync()
+        {
+            return await _database.Table<ShopList>().ToListAsync();
+        }
+
         public Task<List<Product>> GetListProductsAsync(int shoplistid)
         {
             return _database.QueryAsync<Product>(
@@ -78,5 +101,11 @@ namespace Szilveszter_Levente_Lab7.Data
                 return _database.InsertAsync(shop);
             }
         }
+
+        public async Task<int> DeleteShopAsync(Shop shop)
+        {
+            return await _database.DeleteAsync(shop);
+        }
+
     }
 }
